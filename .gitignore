@@ -1,0 +1,17 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+/*
+!.gitignore
+!README.md
+!wp-content
+wp-admin/
+wp-includes/
+
+dist/
+node_modules/
+vendor/
+
+.cache-loader
+npm-debug.log
+composer.lock
+package-lock.json
