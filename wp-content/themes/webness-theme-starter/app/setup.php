@@ -32,7 +32,7 @@ add_action('wp_enqueue_scripts', function () {
  * @return void
  */
 add_action('enqueue_block_editor_assets', function () {
-    if ($manifest = asset('scripts/manifest.asset.php')->get()) {
+    if ($manifest = asset('scripts/manifest.asset.php')->load()) {
         wp_enqueue_script('sage/vendor.js', asset('scripts/vendor.js')->uri(), ...array_values($manifest));
         wp_enqueue_script('sage/editor.js', asset('scripts/editor.js')->uri(), ['sage/vendor.js'], null, true);
 
@@ -202,6 +202,7 @@ $setup_includes = array(
 	'/theme-options.php',                  // Initialize theme default settings.
 	'/widgets.php',                         // Register widget area.
     '/pagination.php',                      // Custom pagination for this theme.
+    '/breadcrumbs.php',                      // Custom pagination for this theme.
     '/thumbnails.php',                      // Custom pagination for this theme.
     '/posttypes.php',                      // Custom pagination for this theme.
 	// '/template-tags.php',                   // Custom template tags for this theme.

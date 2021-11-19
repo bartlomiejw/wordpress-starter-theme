@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Wordpress Custom Pagination.
  *
